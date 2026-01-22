@@ -8,7 +8,7 @@ export default function AboutPage() {
         {
             name: "LinkedIn",
             icon: Linkedin,
-            url: "https://www.linkedin.com/in/abdurrahman-gofiky",
+            url: "https://www.linkedin.com/in/abdgof",
         },
         {
             name: "GitHub",
@@ -47,7 +47,7 @@ export default function AboutPage() {
                             Abdurrahman Gofiky
                         </h1>
                         <p className="text-xl text-zinc-400 leading-relaxed">
-                            Mahasiswa Informatika
+                            Informatics Engineering Student
                         </p>
                     </div>
                 </section>
@@ -55,9 +55,17 @@ export default function AboutPage() {
                 {/* Bio Section */}
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold tracking-tight text-white">About Me</h2>
-                    <p className="text-zinc-400 leading-relaxed">
-                        Halo! Saya adalah seorang mahasiswa Informatika yang memiliki ketertarikan mendalam pada Machine Learning, Natural Language Processing (NLP), dan Web Development. Saya senang membangun solusi inovatif yang menggabungkan kecerdasan buatan dengan pengalaman pengguna yang intuitif.
-                    </p>
+                    <div className="p-6 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl hover:bg-zinc-900/80 transition-all duration-300 space-y-4">
+                        <p className="text-zinc-400 leading-relaxed">
+                            "Hello! I am Abdurrahman Gofiky, an Informatics student from Tasikmalaya with a passion for bridging the gap between Complex Data and Frontend Developer.
+                        </p>
+                        <p className="text-zinc-400 leading-relaxed">
+                            My journey began with a fascination for Natural Language Processing (NLP) and Machine Learning, leading me to build intelligent systems like Spam Detectors and Diagnostic Chatbots. However, I believe that powerful AI needs an equally powerful interface, which drove me to master Modern Web Development using Next.js and Laravel.
+                        </p>
+                        <p className="text-zinc-400 leading-relaxed">
+                            When I'm not coding or debugging, you can find me exploring the world of One Piece, enjoying a game of Mobile Legends, and i really like watching . I am constantly learning, currently focusing on improving my English and exploring the depths of Deep Learning."
+                        </p>
+                    </div>
                 </section>
 
                 {/* Connect & Socials Section */}
@@ -85,7 +93,7 @@ export default function AboutPage() {
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold tracking-tight text-white">Skills</h2>
                     <div className="flex flex-wrap gap-2">
-                        {["Python", "ML.NET", "Next.js", "Laravel", "Mikrotik"].map((skill) => (
+                        {["Python", "C#", "Typescript", "Javascript", "Next.js", "Scikit-learn", "Pandas & Numpy"].map((skill) => (
                             <span
                                 key={skill}
                                 className="px-3 py-1 rounded-full bg-zinc-900/50 border border-zinc-800 text-zinc-300 text-sm hover:bg-zinc-800 transition-colors"
@@ -101,12 +109,12 @@ export default function AboutPage() {
                     <h2 className="text-2xl font-bold tracking-tight text-white">Experience</h2>
                     <div className="p-6 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl hover:bg-zinc-900/80 transition-all duration-300">
                         <div className="flex justify-between items-start mb-2">
-                            <h3 className="text-xl font-medium text-white">Web Developer Intern</h3>
+                            <h3 className="text-xl font-medium text-white">BPS Website Development</h3>
                             <span className="text-sm text-zinc-500">Internship (KP)</span>
                         </div>
-                        <p className="text-blue-400 mb-4">Badan Pusat Statistik (BPS)</p>
+                        <p className="text-blue-400 mb-4">Frontend Web Developer Intern (BPS)</p>
                         <p className="text-zinc-400 leading-relaxed">
-                            Membangun website survei internal untuk mengelola data dan responden, meningkatkan efisiensi proses pengumpulan data statistik.
+                            Developed the frontend interface for the "Organizational Culture Survey" (Survei Budaya Organisasi) application, aiming to automate and digitize the internal employee survey process.
                         </p>
                     </div>
                 </section>

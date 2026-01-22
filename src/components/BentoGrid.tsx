@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Globe } from "lucide-react";
 
 type Project = {
     id?: number;
@@ -9,6 +9,8 @@ type Project = {
     description: string;
     tech: string[];
     colSpan: string;
+    githubUrl?: string;
+    demoUrl?: string;
 };
 
 interface BentoGridProps {
@@ -38,13 +40,30 @@ export const BentoGrid = ({ items }: BentoGridProps) => {
                                     {project.tag}
                                 </span>
                                 <div className="flex gap-2">
-                                    {/* Placeholder Actions */}
-                                    <div className="p-2 bg-zinc-800/80 rounded-full hover:bg-zinc-700 cursor-pointer">
-                                        <Github className="w-4 h-4 text-zinc-300" />
-                                    </div>
-                                    <div className="p-2 bg-zinc-800/80 rounded-full hover:bg-zinc-700 cursor-pointer">
-                                        <ExternalLink className="w-4 h-4 text-zinc-300" />
-                                    </div>
+                                    {project.githubUrl && (
+                                        <a
+                                            href={project.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="p-2 rounded-full bg-zinc-800 hover:bg-zinc-700 transition-colors text-zinc-400 hover:text-white"
+                                        >
+                                            {project.githubUrl.includes("github.com") ? (
+                                                <Github className="w-4 h-4" />
+                                            ) : (
+                                                <Globe className="w-4 h-4" />
+                                            )}
+                                        </a>
+                                    )}
+                                    {project.demoUrl && (
+                                        <a
+                                            href={project.demoUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="p-2 rounded-full bg-zinc-800 hover:bg-zinc-700 transition-colors text-zinc-400 hover:text-white"
+                                        >
+                                            <Globe className="w-4 h-4" />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
 

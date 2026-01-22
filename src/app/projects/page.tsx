@@ -12,7 +12,7 @@ export default function ProjectsPage() {
                         My Projects
                     </h1>
                     <p className="text-zinc-400 leading-relaxed max-w-2xl mx-auto">
-                        Here is a showcase of my technical projects, ranging from Machine Learning and NLP to Web Development and Network Management.
+                        Here is a collection of my technical projects, ranging from Machine Learning and NLP to Web Development.
                     </p>
                 </div>
 

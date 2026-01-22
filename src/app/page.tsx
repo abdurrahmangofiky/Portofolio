@@ -1,5 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { BentoGrid } from "@/components/BentoGrid";
+import { TechStack } from "@/components/TechStack";
 import { projects } from "@/lib/data";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -7,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 export default function Home() {
   // Filter specific projects for Home: "NLP Spam Detection" & "SPK Internship Jepang"
   const featuredProjects = projects.filter(p =>
-    p.title.includes("NLP Spam Detection") || p.title.includes("SPK Internship Jepang")
+    p.title.includes("STARTJAP") || p.title.includes("Chatbot Fish Disease Diagnosis")
   );
 
   return (
@@ -28,14 +29,22 @@ export default function Home() {
             href="/about"
             className="group flex items-center gap-2 px-6 py-3 rounded-full bg-zinc-900/50 border border-zinc-800 hover:bg-zinc-800 transition-all text-zinc-300 hover:text-white"
           >
-            Lihat Profil Saya
+            View My Profile
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </section>
 
-        {/* Featured Projects */}
+        <div className="my-20">
+          <TechStack />
+        </div>
+
         <section id="featured" className="py-10 max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-10 text-center text-zinc-100">Featured Projects</h2>
+          <div className="text-center mb-10 space-y-4">
+            <h2 className="text-3xl font-bold text-zinc-100">Featured Projects</h2>
+            <p className="text-zinc-400 max-w-2xl mx-auto">
+              Some of my best work combining data analysis and system development.
+            </p>
+          </div>
           <BentoGrid items={featuredProjects} />
 
           <div className="flex justify-center mt-10">
@@ -43,7 +52,7 @@ export default function Home() {
               href="/projects"
               className="flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-zinc-200 transition-colors"
             >
-              Lihat Semua Project
+              View All Projects
             </Link>
           </div>
         </section>
