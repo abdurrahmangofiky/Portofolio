@@ -16,9 +16,9 @@ const GlobeDemo = dynamic(() => import("./Globe3D").then(mod => ({ default: mod.
 
 export const Hero = () => {
     return (
-        <section className="min-h-screen flex flex-col justify-center items-center text-center relative">
-            {/* 3D Globe - Background */}
-            <div className="absolute inset-0 z-0">
+        <section className="min-h-screen flex flex-col items-center text-center relative pt-28 md:pt-0 md:justify-center">
+            {/* 3D Globe - Background - Hidden on small mobile, visible on larger screens */}
+            <div className="absolute inset-0 z-0 hidden sm:block">
                 <GlobeDemo />
             </div>
 
@@ -27,16 +27,16 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="space-y-3 sm:space-y-4 relative z-20 mt-[35vh] sm:mt-[40vh] px-4"
+                className="space-y-4 sm:space-y-5 relative z-20 mt-0 sm:mt-[35vh] px-6"
             >
                 {/* Main Title */}
-                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
                     Hi, I&apos;m Gofiky.
                 </h1>
 
                 {/* Subtitle */}
                 <p className="text-base sm:text-lg md:text-xl text-zinc-400 max-w-xl mx-auto px-4">
-                    Web Developer | AI Enthusiast & NLP 
+                    Web Developer | AI Enthusiast & NLP
                 </p>
 
                 {/* Typewriter Effect */}
@@ -63,7 +63,7 @@ export const Hero = () => {
                 </div>
 
                 {/* Social Links */}
-                <div className="flex justify-center items-center gap-6 pt-8">
+                <div className="flex justify-center items-center gap-6 pt-6 sm:pt-8">
                     <a
                         href="https://www.linkedin.com/in/abdgof"
                         target="_blank"

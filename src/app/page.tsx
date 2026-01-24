@@ -11,7 +11,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-zinc-950 selection:bg-blue-500/30 relative overflow-hidden">
+    <main className="min-h-screen bg-zinc-950 selection:bg-blue-500/30 relative overflow-x-hidden overflow-y-auto">
       {/* Blue glow effect - edges */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,_rgba(30,64,175,0.15)_100%)]" />

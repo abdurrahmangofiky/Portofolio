@@ -19,7 +19,7 @@ const stacks = [
 export const TechStack = () => {
     return (
         <section className="py-10">
-            <div className="flex flex-wrap justify-center gap-6 px-4">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 px-4">
                 {stacks.map((stack, index) => (
                     <motion.div
                         key={index}
